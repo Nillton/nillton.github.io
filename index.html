@@ -1,260 +1,426 @@
 <!DOCTYPE html>
-<html lang="en,pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Nilton Curriculo</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/icons8-n-50.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">     
-           <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Nilton Alexandre de Souza Santos</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/MinhaFoto.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Dados Pessoais</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiência Profissional</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formação Acadêmica</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Objetivos</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Cursos</a></li>
-                </ul>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nilton Alexandre | Desenvolvedor Backend .NET</title>
+    <meta name="description" content="Currículo Profissional de Nilton Alexandre de Sousa Santos - Desenvolvedor Backend .NET, C#, APIs RESTful, SQL Server, Oracle e Integração com IA Generativa (OpenAI/ChatGPT)." />
+    <meta name="author" content="Nilton Alexandre de Sousa Santos" />
+    
+    <link rel="icon" type="image/x-icon" href="assets/img/icons8-n-50.png" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+    <!-- Modern Stylesheet -->
+    <link rel="stylesheet" href="css/modern.css" />
+</head>
+<body>
+    <!-- Mobile Hamburger Button -->
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu Navegação">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-header">
+                <div class="profile-avatar-wrapper">
+                    <img class="profile-avatar" src="assets/img/MinhaFoto.jpg" alt="Foto de Nilton Alexandre" />
+                    <span class="status-badge" title="Disponível para novas oportunidades"></span>
+                </div>
+                <h1 class="profile-name">Nilton Alexandre</h1>
+                <p class="profile-role">Desenvolvedor Backend .NET</p>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a class="nav-link-custom active" href="#about">
+                                <i class="fas fa-user-circle"></i> <span>Sobre Mim</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#experience">
+                                <i class="fas fa-briefcase"></i> <span>Experiência</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#skills">
+                                <i class="fas fa-code"></i> <span>Competências</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#education">
+                                <i class="fas fa-graduation-cap"></i> <span>Formação</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#awards">
+                                <i class="fas fa-certificate"></i> <span>Cursos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#interests">
+                                <i class="fas fa-bullseye"></i> <span>Objetivo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Nilton Alexandre
-                        <span class="text-primary">de Souza Santos</span>
+
+            <!-- Theme Switcher Button -->
+            <button class="theme-toggle-btn" id="theme-toggle">
+                <i class="fas fa-sun" id="theme-icon"></i>
+                <span id="theme-text">Modo Claro</span>
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero / About Section -->
+            <section class="section-wrapper" id="about">
+                <div class="hero-card">
+                    <div class="badge-tag">
+                        <i class="fas fa-rocket"></i> Backend .NET
+                    </div>
+                    <h1 class="hero-title">
+                        Nilton Alexandre <br />
+                        <span class="gradient-text">de Sousa Santos</span>
                     </h1>
-                    <div class="subheading mb-5">
-                        <p>· Rua Manuel Bicudo de Aguirre, 543 · São Paulo - SP</p>
-                        <p>· (11) 9.8501-0420</p>
-                        <p>· nillton.alexandre@hotmail.com</p>                        
-                        <p>· 38 Anos · Brasileiro · Casado</p>
-                    </div>
-                    <p class="lead mb-5">Experiência em desenvolvimento de API em Asp net Core e .net framework (C#) com REST, SOAP, Windows services com Visual Studio, 
-                        linguagem SQL com criação e sustentação de views, procs e jobs no SQL Server. Conhecimentos em Angular, 
-                        JavaScript e Node.JS para manutenção e correção dos códigos de backend, versionamento de código com Git.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/nillton-alexandre" target="_blank"><i class="fab fa-linkedin"></i></a>                        
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experiência Profissional-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experiência Profissional</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Desenvolvedor .Net Pleno</h3>
-                            <div class="subheading mb-3">GOVERNANÇABRASIL - GOVBR </div>                               
-                               <p>Desenvolvimento e manutenção em sistema de folha de pagamento voltado para setor público, 
-                                produto desenvolvido em Windows Form, C#, VB.Net e banco de dados SQL Server, 
-                                Processos de desenvolvimento em time ágil (Kaban), Plataforma Azure e Git.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo - SP</span>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Dezembro 2023 - Junho 2024</span></div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:11985010420">(11) 9.8501-0420</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:nillton.alexandre@hotmail.com">nillton.alexandre@hotmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span><span id="user-age">39</span> Anos</span>
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Programador de Sistemas Sênior II</h3>
-                            <div class="subheading mb-3">J. Armando Batista e Benes Advogados Associados - JAB</div>
-                            <p>Desenvolvimento e manutenção de sistema jurídico interno em Windows Form e VB.Net e banco de dados Firebird 2.5 e 3.0, 
-                                sistema realiza gerenciamento de todas as etapas dos processos jurídicos. 
-                                Realizado a integração com o ChapGPT (IA) para inserção, resumo e leitura de iniciais.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Janeiro 2023 - Dezembro 2023</span></div>
-                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem;">
+                        <i class="fas fa-star" style="color: var(--accent-primary);"></i> Resumo Profissional
+                    </h3>
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Analista de Desenvolvimento de Sistemas</h3>
-                            <div class="subheading mb-3">Flex Relacionamentos Inteligentes</div>
-                            <p>Desenvolvimento de aplicações em C#, frameworks .NET e .Net Core 5.0 e 6.0, integração de sistemas via API REST/SOAP, 
-                                e manutenção em backend Node.jse frontend Angular. Domínio em SQL Server para criação e gestão de Views, Procs, Jobs e Tabelas. 
-                                Atuação em aplicação responsável por orquestrar envio de SMS e e-mails para cliente via brokers de comunicação. 
-                                Atuei em rede social interna da empresa construída em Node.js e Angular, realizado manutenção desse código e fatoração do mesmo para C# .Net Core 5.0.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Outubro 2020 - Dezembro 2022</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Analista de Suporte técnico Jr</h3>
-                            <div class="subheading mb-3">Flex Relacionamentos Inteligentes</div>
-                            <p>Atendimento de chamados N1 abertos via sistema, 
-                                execução de procedimentos para resolução de problemas dentro do SLA estipulado em duas unidades da empresa. 
-                                Instalação softwares de upgrade, manutenção para melhoria no desempenho dos equipamentos. 
-                                Controle de estoque de peças de reposição para equipamentos, 
-                                garantindo recursos disponíveis para manutenções, substituições e reparos. 
-                                Suporte na identificação de dificuldades e solução de incidentes e problemas de hardware e software, 
-                                envolvendo a montagem, reparo e configuração de equipamentos (computadores, notebooks e impressoras).</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2018 - Setembro 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Analista de Suporte técnico Jr</h3>
-                            <div class="subheading mb-3">CDF – Central De Funcionamento</div>
-                            <p>Suporte telefônico e remoto (ISL online) a clientes de abrangência nacional. 
-                                Configuração de modens, roteadores e access point, otimização de computadores, 
-                                configuração e instalação de antivírus (McAffe), instalação e configuração de softwares 
-                                (Browser e aplicativos diversos), rede de computadores e configuração de e-mail.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Março 2017 - Agosto 2018</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Analista de Suporte técnico</h3>
-                            <div class="subheading mb-3">Palácio das Plumas Pedrarias e Aviamentos Ltda</div>
-                            <p>Suporte aos usuários em sistema ERP, aplicativos, 
-                                redes e telecomunicações e zelo pelos recursos de hardware, roteadores, 
-                                administração de servidor (Linux Fedora e Windows Server).</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Junho 2013 - Junho 2016</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Formação Acadêmica-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Formação Acadêmica</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">UNIP - Universidade Paulista</h3>
-                            <div class="subheading mb-3">Bacharelado Sistemas de Informação</div>                            
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Fevereiro 2012 - Dezembro 2015</span></div>
-                    </div>                    
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Habilidades-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Habilidades</h2>
-                    <div class="subheading mb-3">Linguagem de Programação e Frameworks</div>
-                    <ul class="list-inline dev-icons">                        
-                        <img src="assets/img/csharp_original_logo_icon_146578.ico"/>
-                        <img src="assets/img/vbNet.png"/>
-                        <img src="assets/img/dotnet_vertical_logo_icon_171217.ico"/>
-                        <img src="assets/img/node-js-svgrepo-com.svg"/>
-                        <img src="assets/img/angular-svgrepo-com.svg"/>
-                        <img src="assets/img/js-svgrepo-com.svg"/>
+                    <ul class="summary-list">
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Experiência Backend & Ecossistema Microsoft:</strong> Desenvolvedor Backend .NET com mais de 5 anos de experiência no ecossistema Microsoft (C#, .NET Core 3.1 ao 9.0, ASP.NET Core e Web APIs).</span>
+                        </li>
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>APIs & Arquitetura de Sistemas:</strong> Especialista no desenvolvimento e consumo de APIs RESTful, arquitetura de sistemas corporativos, integração de serviços e modernização de aplicações legadas.</span>
+                        </li>
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Engenharia & Bancos de Dados:</strong> Sólida vivência na manipulação, modelagem e otimização de bancos de dados relacionais de grande porte (SQL Server, Oracle, Firebird e MySQL).</span>
+                        </li>
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Inovação & IA Generativa:</strong> Experiência prática de destaque na integração de soluções de Inteligência Artificial Generativa (OpenAI / ChatGPT) para automação e otimização de processos de negócio.</span>
+                        </li>
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Evolução do Legado ao Moderno:</strong> Atuação com facilidade do ecossistema legado (.NET Framework, WinForms, VB.NET) ao moderno (.NET 8/9, Node.js).</span>
+                        </li>
+                        <li class="summary-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Qualidade & Práticas DevOps:</strong> Aplicação constante de boas práticas de refatoração, padrões de projeto, metodologias ágeis (Kanban/Scrum) e práticas de DevOps com Azure DevOps e Git.</span>
+                        </li>
                     </ul>
 
-                    <div class="subheading mb-3">Banco de Dados</div>
-                    <ul class="list-inline dev-icons"> 
-                        <img src="assets/img/SQL_SERVER.png"/>
-                        <img src="assets/img/firebird-logo-90.png"/>
-                        <img src="assets/img/mysql_original_wordmark_logo_icon_146417.png"/>
-                    </ul>
-
-                    <div class="subheading mb-3">Ferramentas</div>
-                    <ul class="list-inline dev-icons"> 
-                        <img src="assets/img/Visual_Studio_23517.ico"/>
-                        <img src="assets/img/visual-studio-code-2019.png"/>                        
-                        <img src="assets/img/git_plain_wordmark_logo_icon_146508.ico"/>                        
-                    </ul>
-
-                    <div class="subheading mb-3">FLUXO DE TRABALHO</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Programação Orientada a Objeto em C# com foco em Backend .Net framework e net Core, desenvolvimento e manutenção do Windows Form. Manuteção de codigo em NodeJS e Angular.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Programação em SQL Views, procedures, consultas e manupulação de Jobs
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Versionamento de código com Git.
-                        </li>                        
-                    </ul>
+                    <div class="action-group">
+                        <a class="btn-primary-custom" href="https://www.linkedin.com/in/nillton-alexandre" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a class="btn-secondary-custom" href="https://github.com/nillton" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <!-- Objetivos-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Objetivo</h2>
-                    <p class="lead mb-5">Tenho por objetivo atuação em desenvolvimento backend C# com .Net Framework e Asp Net Core.</p>                    
+
+            <!-- Experience Section -->
+            <section class="section-wrapper" id="experience">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+                    <h2 class="section-title">Experiência Profissional</h2>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Gomara Taxtech -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Desenvolvedor .Net Pleno | Híbrido</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> Gomara Taxtech — São Paulo, SP</div>
+                            </div>
+                            <span class="exp-period">Set/2024 – Presente</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li><strong>Desenvolvimento Backend e APIs:</strong> Atuação no desenvolvimento, evolução e sustentação de sistemas de automação fiscal e contábil, construindo e otimizando Web APIs RESTful com C# e .NET Core (.NET 8 e .NET 9).</li>
+                            <li><strong>Sustentação Frontend:</strong> Suporte e manutenção em interfaces web legadas e modernas utilizando Web Forms, HTML5, CSS3 e jQuery.</li>
+                            <li><strong>Engenharia de Dados:</strong> Modelagem de dados, elaboração de rotinas e otimização de consultas em banco de dados Oracle.</li>
+                            <li><strong>DevOps e Ciclo de Vida (CI/CD):</strong> Gestão de controle de versão com Git via Pull Requests (PRs) e Code Review rigoroso com liderança técnica, garantindo os padrões de qualidade e segurança do código.</li>
+                            <li><strong>Automação de Entregas:</strong> Execução e acompanhamento de pipelines automatizados no Azure DevOps para publicação e deploy contínuos nos ambientes de Desenvolvimento e Homologação.</li>
+                        </ul>
+                    </div>
+
+                    <!-- GOVBR -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Desenvolvedor Pleno | Remoto</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> GOVERNANÇABRASIL - GOVBR</div>
+                            </div>
+                            <span class="exp-period">Dez/2023 – Jun/2024</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Atuação no desenvolvimento, evolução e manutenção corretiva de sistemas corporativos de Folha de Pagamento voltados à gestão pública.</li>
+                            <li>Implementação de novas funcionalidades e regras de negócio utilizando C# e VB.NET (.NET Framework) com interface em Windows Forms.</li>
+                            <li>Modelagem, manutenção e otimização de consultas e rotinas em banco de dados SQL Server.</li>
+                            <li>Implantação e gerenciamento de deploys e recursos na nuvem com Microsoft Azure.</li>
+                            <li>Atuação em equipe ágil utilizando a metodologia Kanban para entregas contínuas e priorização de demandas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- J. Armando Batista -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Programador de Sistemas Sênior II | Presencial</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> J. Armando Batista e Benes Advogados — São Paulo, SP</div>
+                            </div>
+                            <span class="exp-period">Jan/2023 – Dez/2023</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Manutenção, desenvolvimento e evolução de sistemas corporativos na área jurídica, atuando com C#, Visual Basic (.NET Framework) e interface em Windows Forms.</li>
+                            <li><strong>Destaque em IA Generativa:</strong> Concepção e implementação da integração de Web APIs em .NET Core com a API da OpenAI (ChatGPT) para leitura, extração de informações, resumo automático e categorização de petições iniciais jurídicas.</li>
+                            <li>Desenvolvimento e consumo de APIs RESTful em C# para integração de dados entre sistemas e serviços externos.</li>
+                            <li>Sustentação, manutenção e otimização de consultas em banco de dados Firebird.</li>
+                            <li>Aplicação de boas práticas de refatoração de código e padrões de projeto para modernização do ecossistema.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Flex Dev -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Analista de Desenvolvimento de Sistemas | Remoto</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> Flex Relacionamentos Inteligentes — São Paulo, SP</div>
+                            </div>
+                            <span class="exp-period">Abr/2020 – Dez/2022</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Desenvolvimento e manutenção de aplicações em C# (.NET Framework 4.5 e .NET Core 3.1 / 5.0).</li>
+                            <li>Criação, consumo e sustentação de APIs REST e serviços SOAP para integração entre sistemas corporativos.</li>
+                            <li>Refatoração e migração de microsserviços e aplicações backend para Node.js e .NET Core.</li>
+                            <li>Administração e modelagem de banco de dados SQL Server (2017/2019), com criação de Stored Procedures, Views, Jobs e otimização de queries.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Flex Suporte -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Analista de Suporte Técnico</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> Flex Relacionamentos Inteligentes — São Paulo, SP</div>
+                            </div>
+                            <span class="exp-period">Ago/2018 – Mar/2020</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Atendimento de chamados N1 abertos via sistema, SLA, instalação de softwares e manutenção de hardware/software nas unidades da empresa.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CDF -->
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Analista de Suporte Técnico</h3>
+                                <div class="exp-company"><i class="fas fa-building"></i> CDF - Central de Funcionamento — São Paulo, SP</div>
+                            </div>
+                            <span class="exp-period">Mar/2017 – Ago/2018</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Suporte telefônico e remoto N1 a clientes nacionais (modens, roteadores, redes, antivírus e softwares em geral).</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <!-- Prêmios & Certificações-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Cursos</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            DBA Oracle 11g OCP – IBTA.
-                        </li>                        
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            Formação em Servidores Windows e Linux – SENAC. 
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            C# Completo Programação Orientada a Objetos - Nélio Alves.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            API Rest com .NET 5 - ALURA. 
-                        </li>
 
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            Introdução ao Git e ao GitHub - DIO.
-                        </li>   
-                        
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            Node.js Parte 1: Inovando com JavaScript no backend - ALURA.
-                        </li>  
+            <!-- Skills Section -->
+            <section class="section-wrapper" id="skills">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-code"></i></div>
+                    <h2 class="section-title">Competências Técnicas Principais</h2>
+                </div>
 
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            Node.js Parte 2: MVC, autenticação e autorização - ALURA.
-                        </li>  
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <h3 class="cat-title"><i class="fas fa-server"></i> Backend & Linguagens</h3>
+                        <div class="badge-cloud">
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">.NET 8 / 9</span>
+                            <span class="tech-badge">.NET Core</span>
+                            <span class="tech-badge">ASP.NET Core APIs</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">JSON / XML</span>
+                            <span class="tech-badge">VB.NET</span>
+                        </div>
+                    </div>
 
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            JavaScript: primeiros passos com a linguagem - ALURA.
-                        </li> 
-                        <li>
-                            <span class="fa-li"><i class="fas fa-book-reader"></i></span>
-                            JavaScript: Programando a Orientação a Objetos - ALURA.
-                        </li>                                                
-                        
-                    </ul>
+                    <div class="skill-category-card">
+                        <h3 class="cat-title"><i class="fas fa-database"></i> Bancos de Dados</h3>
+                        <div class="badge-cloud">
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Oracle 11g</span>
+                            <span class="tech-badge">Firebird</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Procs & Views</span>
+                            <span class="tech-badge">Otimização de Queries</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="cat-title"><i class="fas fa-cloud"></i> DevOps, Nuvem & Métodos</h3>
+                        <div class="badge-cloud">
+                            <span class="tech-badge">Microsoft Azure</span>
+                            <span class="tech-badge">Azure DevOps</span>
+                            <span class="tech-badge">Git & Pull Requests</span>
+                            <span class="tech-badge">CI / CD Pipelines</span>
+                            <span class="tech-badge">Kanban</span>
+                            <span class="tech-badge">Scrum</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="cat-title"><i class="fas fa-brain"></i> Inovação & Arquitetura</h3>
+                        <div class="badge-cloud">
+                            <span class="tech-badge">APIs de LLM (ChatGPT/OpenAI)</span>
+                            <span class="tech-badge">APIs RESTful</span>
+                            <span class="tech-badge">Microsserviços</span>
+                            <span class="tech-badge">Refatoração Legada</span>
+                            <span class="tech-badge">Design Patterns</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">
+                    Tecnologias & Ferramentas
+                </h3>
+                <div class="tech-gallery">
+                    <div class="tech-icon-item">
+                        <img src="assets/img/csharp_original_logo_icon_146578.ico" alt="C#" />
+                        <span>C#</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/dotnet_vertical_logo_icon_171217.ico" alt=".NET" />
+                        <span>.NET</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/vbNet.png" alt="VB.NET" />
+                        <span>VB.NET</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/node-js-svgrepo-com.svg" alt="Node.js" />
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/js-svgrepo-com.svg" alt="JavaScript" />
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/SQL_SERVER.png" alt="SQL Server" />
+                        <span>SQL Server</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/oracle-logo.svg" alt="Oracle" />
+                        <span>Oracle</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/firebird-logo-90.png" alt="Firebird" />
+                        <span>Firebird</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/mysql_original_wordmark_logo_icon_146417.png" alt="MySQL" />
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/Visual_Studio_23517.ico" alt="Visual Studio" />
+                        <span>Visual Studio</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/visual-studio-code-2019.png" alt="VS Code" />
+                        <span>VS Code</span>
+                    </div>
+                    <div class="tech-icon-item">
+                        <img src="assets/img/git_plain_wordmark_logo_icon_146508.ico" alt="Git" title="Git" />
+                        <span>Git</span>
+                    </div>
                 </div>
             </section>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+
+            <!-- Education Section -->
+            <section class="section-wrapper" id="education">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2 class="section-title">Formação Acadêmica</h2>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="info-card">
+                        <h3 class="info-card-title">Universidade Paulista</h3>
+                        <p class="info-card-sub">Bacharelado em Sistemas de Informação (Information Technology)</p>
+                        <p class="info-card-meta"><i class="far fa-calendar-alt"></i> 2012 – 2015</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section class="section-wrapper" id="awards">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-certificate"></i></div>
+                    <h2 class="section-title">Cursos & Certificações</h2>
+                </div>
+
+                <ul class="course-list">
+                    <li class="course-item"><i class="fas fa-award"></i> DBA Oracle 11g OCP – IBTA</li>
+                    <li class="course-item"><i class="fas fa-award"></i> Formação em Servidores Windows e Linux – SENAC</li>
+                    <li class="course-item"><i class="fas fa-award"></i> C# Completo Programação Orientada a Objetos - Nélio Alves</li>
+                    <li class="course-item"><i class="fas fa-award"></i> API Rest com .NET 5 - ALURA</li>
+                    <li class="course-item"><i class="fas fa-award"></i> Introdução ao Git e ao GitHub - DIO</li>
+                    <li class="course-item"><i class="fas fa-award"></i> Node.js Parte 1: Inovando com JavaScript no backend - ALURA</li>
+                    <li class="course-item"><i class="fas fa-award"></i> Node.js Parte 2: MVC, autenticação e autorização - ALURA</li>
+                    <li class="course-item"><i class="fas fa-award"></i> JavaScript: primeiros passos com a linguagem - ALURA</li>
+                    <li class="course-item"><i class="fas fa-award"></i> JavaScript: Programando a Orientação a Objetos - ALURA</li>
+                </ul>
+            </section>
+
+            <!-- Objective Section -->
+            <section class="section-wrapper" id="interests">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                    <h2 class="section-title">Objetivo Profissional</h2>
+                </div>
+
+                <div class="info-card">
+                    <p style="font-size: 1.05rem; color: var(--text-main); font-weight: 500;">
+                        Desenvolvimento Backend .NET / C# em projetos modernos, microsserviços, consumo e criação de Web APIs RESTful e integração de soluções inovadoras de Inteligência Artificial Generativa e serviços em Nuvem.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modern Script -->
+    <script src="js/modern.js"></script>
+</body>
 </html>
